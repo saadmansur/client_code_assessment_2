@@ -39,11 +39,12 @@ export default function SignUp() {
   
         // read raw text first so we never throw on invalid JSON
         const text = await resp.text();
+        const json = text ? JSON.parse(text) : {};
         const contentType = resp.headers.get('content-type') || '';
   
         if (!resp.ok) {
           console.error('Signup failed', { status: resp.status, body: text });
-          alert(`Server error ${resp.status}. See console for details.`);
+          alert(`Error: ${json?.message || text || 'No error message provided'}`);
           return;
         }
   
