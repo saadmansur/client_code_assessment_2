@@ -1,9 +1,13 @@
 "use client";
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '../context/AuthContext';
 import styles from './page.module.css';
 
 export default function SignIn() {
+    const { login } = useAuth();
+    const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -39,9 +43,10 @@ export default function SignIn() {
   
         if (contentType.includes('application/json')) {
           const data = JSON.parse(text);
-          alert(data.message || 'Account created');
-          setEmail('');
-          setPassword('');
+          // data should include the user's name (adjust to your backend)
+          const name = data.name || data.user?.name || data.email || "";
+          login({ name, email: data.email || email });
+          router.push('/');
         } else {
           console.warn('Expected JSON but got:', contentType, text);
           alert('Server returned non-JSON response — check backend logs (see console).');

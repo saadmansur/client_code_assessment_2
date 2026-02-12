@@ -23,7 +23,7 @@ export default function SignUp() {
       }
       setIsSubmitting(true);
       try {
-        const base = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3003';
+        const base = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3002';
         const url = `${base.replace(/\/$/, '')}/users`;
   
         const resp = await fetch(url, {
