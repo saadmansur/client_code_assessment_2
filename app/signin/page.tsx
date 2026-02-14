@@ -14,7 +14,7 @@ export default function SignIn() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: call your auth API
+    // call our auth API
           setIsSubmitting(true);
       try {
         const base = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3002';
