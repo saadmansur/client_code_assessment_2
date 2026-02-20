@@ -1,6 +1,6 @@
 "use client";
 import SignUpForm from "./SignUpForm";
-import styles from "./page.module.css";
+import styles from "../../components/login.module.css";
 
 export default function SignUpPage() {
   return (

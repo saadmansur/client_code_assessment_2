@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hero.module.css';
 import heroImg from '../main-img.svg';
+import AppImage from './AppImage';
 
 export default function Hero() {
   const [email, setEmail] = useState('');
@@ -20,27 +21,19 @@ export default function Hero() {
              </p>
 
             <div className={styles.ctaRow}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className={styles.emailInput}
-                aria-label="Email address"
-              />
               <Link href="/signup" className={styles.btnPrimary}>
                 Get Started
               </Link>
             </div>
            </div>
            <div className={styles.heroImage}>
-             <Image 
-               src={heroImg} 
-               alt="Product showcase"
-               width={600}
-               height={400}
-               priority
-             />
+             <AppImage
+              src={heroImg}
+              alt="Profile photo"
+              fill
+              aspectRatio={16 / 9}
+              rounded
+            />
            </div>
          </div>
        </div>

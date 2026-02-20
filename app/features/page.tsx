@@ -1,11 +1,11 @@
-import styles from './page.module.css';
+import styles from "../../components/login.module.css";
+import FeatureForm from "./FeaturesForm";
 
 export default function Features() {
   return (
     <main className={styles.pageContent}>
       <div className={styles.container}>
-        <h1>Features</h1>
-        <p>Discover all the powerful features that make our platform stand out.</p>
+        <FeatureForm />
       </div>
     </main>
   );
