@@ -10,12 +10,10 @@ export default function HowItWorks() {
              <AppImage
               src={heroImg}
               alt="Profile photo"
-              fill
-              aspectRatio={16 / 9}
               rounded
               style={{
     objectFit: "fill",
-    objectPosition: "center top",
+    objectPosition: "center",
   }}
             />
             <br />

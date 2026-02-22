@@ -29,7 +29,6 @@ export default function Pricing() {
              <AppImage
               src={heroImg}
               alt="Profile photo"
-              aspectRatio={16 / 9}
               rounded
             />
            </div>

@@ -33,12 +33,13 @@ export default function AppImage({
           : undefined
       }
     >
-      <Image
-        {...props}
+      
+      <Image 
+         {...props}
         sizes={sizes ?? "100vw"}
         className={`${styles.image} ${className}`}
         style={{
-          objectFit: props.style?.objectFit ?? "cover",
+          objectFit: props.style?.objectFit ?? "fill",
           ...props.style,
         }}
         onLoad={() => setIsLoading(false)}
