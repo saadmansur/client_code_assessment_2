@@ -1,0 +1,42 @@
+/* components/TextContainer.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: fit-content;
+  padding: 12px;
+  border: 0px solid #e5e5e5;
+  border-radius: 8px;
+  background: white;
+}
+
+.content {
+  flex: 1; /* This makes content expand */
+  color: #666;
+  margin-bottom: 1px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 6px;
+}
+
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  /* Makes all items in a row equal height */
+  align-items: stretch;
+}

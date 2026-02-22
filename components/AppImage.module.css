@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* Rounded option */
+.rounded {
+  border-radius: 12px;
+}
+
+/* Loading skeleton */
+.loading::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #f2f2f2 25%,
+    #e6e6e6 37%,
+    #f2f2f2 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
